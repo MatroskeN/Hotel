@@ -45,15 +45,16 @@
          url('../fonts/raleway-v19-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 //Gilroy bold
-  @font-face {
-    font-family: 'Gilroy Bold';
-    src: url('Gilroy-Bold.eot');
-    src: url('Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
-    url('Gilroy-Bold.woff') format('woff'),
-    url('Gilroy-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    }
+@font-face { 
+  font-family: "GilroyBold";
+  src: url("../fonts/GilroyBold/GilroyBold.eot");
+  src: url("../fonts/GilroyBold/GilroyBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GilroyBold/GilroyBold.woff") format("woff"),
+  url('../fonts/GilroyBold.woff2') format('woff2'),
+  url("../fonts/GilroyBold/GilroyBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
 /* montserrat-300 - latin_cyrillic */
 @font-face {
     font-family: 'Montserrat';
@@ -100,7 +101,13 @@
          url('../fonts/montserrat-v15-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
-.banner{
+  .mob-wrapper{
+    display: none;
+  }
+@media(max-width:768px){
+  .mob-wrapper{
+    display: block;
+    .banner{
     background: url(../img/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -146,7 +153,50 @@
             }
         }
     }
+
+    .main-title{
+      margin-top: 157px;
+      .banner-logo{
+        width: 295px;
+        margin: 0 auto;
+        text-align: right;
+      }
+      .title{
+        margin-top: 17px;
+        font-family: GilroyBold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 96px;
+        line-height: 83px;
+        /* identical to box height */
+  
+        text-align: center;
+        letter-spacing: -0.07em;
+  
+        color: #FFFFFF;
+      }
+
+      .subtitle{
+        width: 278px;
+        margin: 0 auto;
+        margin-top: 34px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+        /* or 18px */
+
+        text-align: center;
+
+        color: #FFFFFF;
+      }
+      
+    }
 }
+  }
+}
+  
 
 
 

@@ -39,11 +39,11 @@
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @font-face {
-  font-family: 'Gilroy Bold';
-  src: url('Gilroy-Bold.eot');
-  src: url('Gilroy-Bold.eot?#iefix') format('embedded-opentype'), url('Gilroy-Bold.woff') format('woff'), url('Gilroy-Bold.ttf') format('truetype');
-  font-weight: normal;
+  font-family: "GilroyBold";
+  src: url("../fonts/GilroyBold/GilroyBold.eot");
+  src: url("../fonts/GilroyBold/GilroyBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GilroyBold/GilroyBold.woff") format("woff"), url('../fonts/GilroyBold.woff2') format('woff2'), url("../fonts/GilroyBold/GilroyBold.ttf") format("truetype");
   font-style: normal;
+  font-weight: 700;
 }
 /* montserrat-300 - latin_cyrillic */
 @font-face {
@@ -85,57 +85,98 @@
   src: local(''), url('../fonts/montserrat-v15-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/montserrat-v15-latin_cyrillic-700.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-.banner {
-  background: url(../img/banner.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
+.mob-wrapper {
+  display: none;
 }
-.banner header {
-  height: 54px;
-  width: 100%;
-}
-.banner header .header-content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding-top: 27px;
-  padding-left: 14px;
-  padding-right: 14px;
-}
-.banner header .left-block {
-  width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.banner header .left-block .lang-panel {
-  margin-left: 16px;
-  margin-top: 15px;
-}
-.banner header .left-block .lang-panel .lang {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 100%;
-  /* identical to box height, or 18px */
-  color: #FFFFFF;
-}
-.banner header .right-block {
-  width: 50%;
-  text-align: right;
-  position: relative;
-}
-.banner header .right-block img {
-  vertical-align: bottom;
+@media (max-width: 768px) {
+  .mob-wrapper {
+    display: block;
+  }
+  .mob-wrapper .banner {
+    background: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }
+  .mob-wrapper .banner header {
+    height: 54px;
+    width: 100%;
+  }
+  .mob-wrapper .banner header .header-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 27px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .mob-wrapper .banner header .left-block {
+    width: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mob-wrapper .banner header .left-block .lang-panel {
+    margin-left: 16px;
+    margin-top: 15px;
+  }
+  .mob-wrapper .banner header .left-block .lang-panel .lang {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 100%;
+    /* identical to box height, or 18px */
+    color: #FFFFFF;
+  }
+  .mob-wrapper .banner header .right-block {
+    width: 50%;
+    text-align: right;
+    position: relative;
+  }
+  .mob-wrapper .banner header .right-block img {
+    vertical-align: bottom;
+  }
+  .mob-wrapper .banner .main-title {
+    margin-top: 157px;
+  }
+  .mob-wrapper .banner .main-title .banner-logo {
+    width: 295px;
+    margin: 0 auto;
+    text-align: right;
+  }
+  .mob-wrapper .banner .main-title .title {
+    margin-top: 17px;
+    font-family: GilroyBold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 83px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: -0.07em;
+    color: #FFFFFF;
+  }
+  .mob-wrapper .banner .main-title .subtitle {
+    width: 278px;
+    margin: 0 auto;
+    margin-top: 34px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
+    text-align: center;
+    color: #FFFFFF;
+  }
 }
