@@ -179,4 +179,54 @@
     text-align: center;
     color: #FFFFFF;
   }
+  .mob-wrapper .sunrise {
+    position: relative;
+    background: url(../img/back1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 685px;
+    margin-top: -4px;
+  }
+  .mob-wrapper .sunrise .sunrise-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 74.5%;
+    /* or 31px */
+    color: #FFFFFF;
+    padding-top: 81px;
+    margin-bottom: 19px;
+    margin-left: 15px;
+  }
+  .mob-wrapper .sunrise .sunrise-subtitle {
+    max-width: 261px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 118.5%;
+    /* or 19px */
+    color: #FFFFFF;
+    margin-left: 15px;
+    margin-bottom: 35px;
+  }
+  .mob-wrapper .sunrise .sunrise-des {
+    max-width: 261px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 150%;
+    /* or 16px */
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .mob-wrapper .sunrise img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
