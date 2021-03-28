@@ -269,13 +269,85 @@
           right: 0;
           bottom: 0;
         }
+      &-slider{
+        margin-left: 30px;
+        margin-top: 17px;
+        display: flex;
+        align-items: center;
+        .slider-wrapper{
+          max-width: 200px;
+          width: 100%;
+          .slider-top{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            max-width: 184px;
+            .time{
+              font-family: Montserrat;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 10px;
+              line-height: 118.5%;
+              color: #FFFFFF;
+            }
+          }
+          .slider-bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .range-icon{
+              img{
+                position: relative;
+
+              }
+            }
+            .range-slider{
+              width: 120px;
+              .irs-line,
+              .irs-bar{
+                height: 2px;
+                background-color: #dee4ec;
+                border-radius: 0;
+              }
+              .irs-handle{
+                background: #212a3d;
+                width: 18px;
+                height: 18px;
+                border: 2px solid #FFFFFF;
+                top: 29px;
+                &::before{
+                  opacity: 0.3;
+                  border: 6px solid #FFFFFF;
+                  width: 44px;
+                  height: 44px;
+                  display: block;
+                  content: '';
+                  border-radius: 100%;
+                  position: absolute;
+                  left: -21px;
+                  top: -20px;
+                }
+              }
+            }
+          }
+        }
+        .slider-play{
+          padding-left: 30px;
+          img{
+            position: relative;
+            z-index: 10;
+            display: block;
+            margin-left: auto;
+          }
+        }
+      }
     }
     .shower{
       position: relative;
       margin-top: -33px;
       height: auto;
       width: 100%;
-      background: url(../img/showerbg.png) no-repeat center;
+      background: url(../img/shower.jpg) no-repeat center;
       
       .shower-content{
         margin-left:15px;
@@ -325,7 +397,6 @@
       }
       .shower-slider-title{
         width: 100%;
-        position: absolute;
         bottom: 0;
         font-family: Montserrat;
         font-style: normal;
@@ -341,39 +412,40 @@
     }
     
     .shower-slider-container{
-      background: url(../img/shower-slider-bg.png);
-      background-size: cover;
-      background-position: center;
       padding-bottom: 50px;
       #slideMain{
         height: 300px;
       }
       .slider{
         background: transparent;
-        height: 100%;
-        width: 280px;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 250px;
         img{
           height: 173px;
           width: 198px;
-          filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.15));
+          transform: scale(1);
+          transition: all 0.4s;
         }
+      }
+      .swiper-pagination-bullet{
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .swiper-pagination-bullet-active{
+        background: #A3DF56;
       }
       .swiper-slide-active{
         img{
-          height: 222px !important;
-          width: 256px !important;
+          transform: scale(1.2);
         }
       }
     }
 
     .toilet{
       position: relative;
-      background: url(../img/toilet-bg.png) no-repeat center;
+      background: url(../img/toilet-bg.png) no-repeat bottom;
       background-size: cover;
-
       .toilet-content{
         padding-top: 81px;
         padding-left: 15px;
@@ -420,7 +492,6 @@
       }
       .toilet-slider-title{
         width: 100%;
-        position: absolute;
         bottom: 0;
         font-family: Montserrat;
         font-style: normal;
@@ -435,32 +506,34 @@
       }
     }
     .toilet-slider-container{
-        background: url(../img/shower-slider-bg.png);
-        background-size: cover;
-        background-position: center;
         padding-bottom: 50px;
         #slideMain{
           height: 300px;
         }
-        .slider{
-          background: transparent;
-          height: 100%;
-          width: 280px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          img{
-            height: 173px;
-            width: 198px;
-            filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.15));
-          }
+      .slider{
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        img{
+          height: 173px;
+          width: 198px;
+          transform: scale(1);
+          transition: all 0.4s;
         }
-        .swiper-slide-active{
-          img{
-            height: 222px !important;
-            width: 256px !important;
-          }
+      }
+      .swiper-pagination-bullet{
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .swiper-pagination-bullet-active{
+        background: #A3DF56;
+      }
+      .swiper-slide-active{
+        img{
+          transform: scale(1.2);
         }
+      }
     }
     .hot{
       position: relative;
@@ -958,88 +1031,95 @@
           margin-top: 94px !important;
         }
       }
+
     }
     .jungle-slider-container{
-      background: url(../img/shower-slider-bg.png);
-      background-size: cover;
-      background-position: center;
       padding-bottom: 50px;
       #slideMain{
         height: 300px;
       }
       .slider{
         background: transparent;
-        height: 100%;
-        width: 280px;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 250px;
         img{
           height: 173px;
           width: 198px;
-          filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.15));
+          transform: scale(1);
+          transition: all 0.4s;
         }
+      }
+      .swiper-pagination-bullet{
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .swiper-pagination-bullet-active{
+        background: #A3DF56;
       }
       .swiper-slide-active{
         img{
-          height: 222px !important;
-          width: 256px !important;
+          transform: scale(1.2);
         }
       }
     }
     .beach-slider-container{
-      background: url(../img/shower-slider-bg.png);
-      background-size: cover;
-      background-position: center;
       padding-bottom: 50px;
       #slideMain{
         height: 300px;
       }
       .slider{
         background: transparent;
-        height: 100%;
-        width: 280px;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 250px;
         img{
           height: 173px;
           width: 198px;
-          filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.15));
+          transform: scale(1);
+          transition: all 0.4s;
         }
+      }
+      .swiper-pagination-bullet{
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .swiper-pagination-bullet-active{
+        background: #A3DF56;
       }
       .swiper-slide-active{
         img{
-          height: 222px !important;
-          width: 256px !important;
+          transform: scale(1.2);
         }
       }
     }
     .beach2-slider-container{
-      background: url(../img/shower-slider-bg.png);
-      background-size: cover;
-      background-position: center;
       padding-bottom: 50px;
       #slideMain{
         height: 300px;
       }
       .slider{
         background: transparent;
-        height: 100%;
-        width: 280px;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 250px;
         img{
           height: 173px;
           width: 198px;
-          filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.15));
+          transform: scale(1);
+          transition: all 0.4s;
         }
+      }
+      .swiper-pagination-bullet{
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .swiper-pagination-bullet-active{
+        background: #A3DF56;
       }
       .swiper-slide-active{
         img{
-          height: 222px !important;
-          width: 256px !important;
+          transform: scale(1.2);
         }
       }
     }
@@ -1254,7 +1334,7 @@
       z-index: 3;
       height: auto;
       padding-top: 76px;
-      background: url(../img/stars.png) no-repeat center;
+      background: url(../img/stars.png) no-repeat top;
       background-size: cover;
       
       .sky-content{
@@ -1318,30 +1398,32 @@
       }
     }
     .sky-slider-container{
-      background: url(../img/shower-slider-bg.png);
-      background-size: cover;
-      background-position: center;
       padding-bottom: 50px;
       #slideMain{
         height: 300px;
       }
       .slider{
         background: transparent;
-        height: 100%;
-        width: 280px;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 250px;
         img{
           height: 173px;
           width: 198px;
-          filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.15));
+          transform: scale(1);
+          transition: all 0.4s;
         }
+      }
+      .swiper-pagination-bullet{
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .swiper-pagination-bullet-active{
+        background: #FFFFFF;
       }
       .swiper-slide-active{
         img{
-          height: 222px !important;
-          width: 256px !important;
+          transform: scale(1.2);
         }
       }
     }

@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!--Plugin CSS file with desired skin-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/libs.min.js"></script>
     <title>Document</title>
+    <script src="js/main.js"></script>
 </head>
 <body id="body">
     <div class="mob-wrapper">
@@ -65,6 +71,27 @@
                 <h3 class="sunrise-meet">
                     Встретить рассвет
                 </h3>
+                <div class="sunrise-slider">
+                    <div class="slider-wrapper">
+                        <div class="slider-top">
+                            <div class="top-start time">5:00</div>
+                            <div class="top-stop time">6:00</div>
+                        </div>
+                        <div class="slider-bottom">
+                            <div class="range-slider">
+                                <input type="text" class="range">
+                            </div>
+                            <div class="range-icon">
+                                <img src="img/sunrise.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-play">
+                        <a href="#" class="play-btn">
+                            <img src="img/playBtn.svg" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
                 <img class="people-img" src="img/ppl1.png" alt="ppl">
         </div>
@@ -85,23 +112,23 @@
             <div class="shower-slider-title">
                 <h2 class="title">Фотографии</h2>
             </div>
-        </div>
-        <div class="shower-slider-container">
-            <div class="swiper-container shower-slider" id="slideMain">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                </div>
-                <!-- Add Scrollbar -->
-                
-                <div class="swiper-pagination main-pagination">
+            <div class="shower-slider-container">
+                <div class="swiper-container shower-slider" id="slideMain">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                    </div>
+                    <!-- Add Scrollbar -->
+
+                    <div class="swiper-pagination main-pagination">
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,23 +149,23 @@
             <div class="toilet-slider-title">
                 <h2 class="title">Фотографии</h2>
             </div>
-        </div>
-        <div class="toilet-slider-container">
-            <div class="swiper-container toilet-slider" id="slideMain">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                </div>
-                <!-- Add Scrollbar -->
-                
-                <div class="swiper-pagination toilet-pagination">
+            <div class="toilet-slider-container">
+                <div class="swiper-container toilet-slider" id="slideMain">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                    </div>
+                    <!-- Add Scrollbar -->
+
+                    <div class="swiper-pagination toilet-pagination">
+                    </div>
                 </div>
             </div>
         </div>
@@ -351,27 +378,28 @@
                 <div class="hotel-slider-title">
                     Фотографии
                 </div>
+                <div class="jungle-slider-container">
+                    <div class="swiper-container jungle-slider" id="slideMain">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                        </div>
+                        <!-- Add Scrollbar -->
+
+                        <div class="swiper-pagination jungle-pagination">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="jungle-slider-container">
-            <div class="swiper-container jungle-slider" id="slideMain">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                </div>
-                <!-- Add Scrollbar -->
-                
-                <div class="swiper-pagination jungle-pagination">
-                </div>
-            </div>
-        </div>
+
         <div class="hotel beach">
             <div class="hotel-content">
                 <div class="hotel-subtitle">2 отель</div>
@@ -398,24 +426,24 @@
                 <div class="hotel-slider-title beach-slider-title">
                     Фотографии
                 </div>
-            </div>
-        </div>
-        <div class="beach-slider-container">
-            <div class="swiper-container beach-slider" id="slideMain">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                </div>
-                <!-- Add Scrollbar -->
-                
-                <div class="swiper-pagination beach-pagination">
+                <div class="beach-slider-container">
+                    <div class="swiper-container beach-slider" id="slideMain">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                        </div>
+                        <!-- Add Scrollbar -->
+
+                        <div class="swiper-pagination beach-pagination">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -445,24 +473,24 @@
                 <div class="hotel-slider-title beach-slider-title">
                     Фотографии
                 </div>
-            </div>
-        </div>
-        <div class="beach2-slider-container">
-            <div class="swiper-container beach2-slider" id="slideMain">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                </div>
-                <!-- Add Scrollbar -->
-                
-                <div class="swiper-pagination beach2-pagination">
+                <div class="beach2-slider-container">
+                    <div class="swiper-container beach2-slider" id="slideMain">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                        </div>
+                        <!-- Add Scrollbar -->
+
+                        <div class="swiper-pagination beach2-pagination">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -587,26 +615,27 @@
             <div class="sky-slider-title">
                 Фотографии
             </div>
-        </div>
-        <div class="sky-slider-container">
-            <div class="swiper-container sky-slider" id="slideMain">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                  <div class="swiper-slide slider">
-                    <img src="img/shower-slide1.png" alt="slide">
-                  </div> 
-                </div>
-                <!-- Add Scrollbar -->
-                
-                <div class="swiper-pagination sky-pagination">
+            <div class="sky-slider-container">
+                <div class="swiper-container sky-slider" id="slideMain">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                    </div>
+                    <!-- Add Scrollbar -->
+
+                    <div class="swiper-pagination sky-pagination">
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="remember">
             <div class="footer-content">
                 <img src="img/footer-logo.png" alt="logo" class="footer-logo">
@@ -621,8 +650,5 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
