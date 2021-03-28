@@ -629,6 +629,7 @@
             flex-flow: row wrap;
     margin: 0 auto;
     max-width: 320px;
+    padding-bottom: 40px;
   }
   .mob-wrapper .interier .interier-items .item {
     max-width: 158px;
@@ -882,15 +883,37 @@
     background: url(../img/junglebg.png) no-repeat center;
     background-size: cover;
   }
+  .mob-wrapper .jungle .jungle-play {
+    position: absolute;
+    top: 94px;
+    right: 10px;
+    width: 83px;
+    height: 83px;
+  }
   .mob-wrapper .beach {
     background: url(../img/beachbg.png) no-repeat center;
     background-size: cover;
+  }
+  .mob-wrapper .beach .beach-play {
+    position: absolute;
+    top: 93px;
+    right: 10px;
+    width: 83px;
+    height: 83px;
   }
   .mob-wrapper .beach2 {
     background: url(../img/beach2bg.png) no-repeat center;
     background-size: cover;
   }
+  .mob-wrapper .beach2 .beach2-play {
+    position: absolute;
+    top: 47px;
+    right: 10px;
+    width: 83px;
+    height: 83px;
+  }
   .mob-wrapper .hotel {
+    position: relative;
     height: auto;
     padding-top: 47px;
   }
@@ -925,7 +948,7 @@
     line-height: 140%;
     /* or 17px */
     color: #FFFFFF;
-    max-width: 303px;
+    max-width: 280px;
     margin-bottom: 47px;
   }
   .mob-wrapper .hotel .hotel-content .hotel-describe .d-item {
@@ -955,7 +978,6 @@
   }
   .mob-wrapper .hotel .hotel-content .hotel-slider-title {
     margin-top: 57px;
-    padding-bottom: 31px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
