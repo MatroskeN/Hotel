@@ -24,6 +24,26 @@ $(document).ready(function (){
 
     function ScrollAnimation() {
 
+        console.log()
+
+        let Main = document.querySelector('.banner');
+        let Screen1 = document.querySelector('.sunrise');
+
+        if (Screen1.getBoundingClientRect().top < (window.innerHeight - (window.innerHeight / 100 * 30))){
+            $('.main-anim').css({
+                opacity: 0
+            })
+            $('.sun-anim').css({
+                opacity: 1
+            })
+        } else {
+            $('.main-anim').css({
+                opacity: 1
+            })
+            $('.sun-anim').css({
+                opacity: 0
+            })
+        }
 
     }
 
