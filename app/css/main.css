@@ -108,7 +108,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 0;
+    z-index: -1;
   }
   .mob-wrapper .banner header {
     height: 54px;
@@ -424,6 +424,7 @@
     height: auto;
     width: 100%;
     background: url(../img/shower.jpg) no-repeat center;
+    background-size: cover;
   }
   .mob-wrapper .shower .shower-content {
     margin-left: 15px;
