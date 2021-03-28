@@ -1,5 +1,7 @@
 $(document).ready(function (){
 
+    window.Animate = true
+
     $(".range").ionRangeSlider({
         min: 0,
         max: 100,
@@ -24,10 +26,24 @@ $(document).ready(function (){
 
     function ScrollAnimation() {
 
-        console.log()
 
         let Main = document.querySelector('.banner');
         let Screen1 = document.querySelector('.sunrise');
+
+        if (Screen1.getBoundingClientRect().top == window.innerHeight){
+            window.Animate = true
+        }
+
+        if (Screen1.getBoundingClientRect().top < (window.innerHeight - 1) && window.Animate == true){
+            $('html,body').animate({scrollTop: window.innerHeight +"px"},{
+                duration:1E3,
+                complete: function (){
+                    window.Animate = false
+                }
+            });
+            window.Animate = false
+
+        }
 
         if (Screen1.getBoundingClientRect().top < (window.innerHeight - (window.innerHeight / 100 * 30))){
             $('.main-anim').css({
