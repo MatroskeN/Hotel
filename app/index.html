@@ -55,6 +55,7 @@
             </div>
         </div>
         <div class="sunrise">
+            <div class="sunrise-bg"></div>
             <div class="sunrise-text">
                 <h2 class="sunrise-title">Рассвет</h2>
                 <h3 class="sunrise-subtitle">
@@ -82,18 +83,28 @@
                                 <input type="text" class="range">
                             </div>
                             <div class="range-icon">
-                                <img src="img/sunrise.svg" alt="">
+                                <svg width="53" height="35" viewBox="0 0 53 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="53" height="35" fill="url(#pattern0)"/>
+                                    <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0" transform="translate(-0.00593427) scale(0.0106512 0.016129)"/>
+                                        </pattern>
+                                        <image id="image0" width="95" height="62" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>
                             </div>
                         </div>
                     </div>
                     <div class="slider-play">
                         <a href="#" class="play-btn">
-                            <img src="img/playBtn.svg" alt="">
+                            <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M51.7234 15.2554C31.2771 15.2554 14.7021 31.8303 14.7021 52.2766C14.7021 72.7229 31.2771 89.2979 51.7234 89.2979C72.1697 89.2979 88.7447 72.7229 88.7447 52.2766C88.7447 31.8303 72.1697 15.2554 51.7234 15.2554ZM41.6081 68.3787V36.1746L69.4977 52.2766L41.6081 68.3787Z" fill="white"/>
+                                <circle cx="52" cy="52" r="51.5" stroke="white"/>
+                            </svg>
                         </a>
                     </div>
                 </div>
             </div>
-                <!-- <img class="people-img" src="img/ppl1.png" alt="ppl"> -->
         </div>
         <div class="shower">
             <div class="shower-content">

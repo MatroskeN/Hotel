@@ -179,6 +179,44 @@
     text-align: center;
     color: #FFFFFF;
   }
+  .mob-wrapper .sunrise-color .sunrise-title,
+  .mob-wrapper .sunrise-color .sunrise-subtitle,
+  .mob-wrapper .sunrise-color .sunrise-des,
+  .mob-wrapper .sunrise-color .sunrise-meet,
+  .mob-wrapper .sunrise-color .time {
+    color: #272F3E !important;
+  }
+  .mob-wrapper .sunrise-color .range-slider .irs-line,
+  .mob-wrapper .sunrise-color .range-slider .irs-bar {
+    background-color: #272F3E !important;
+    -webkit-transition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    transition: background-color 0.4s;
+  }
+  .mob-wrapper .sunrise-color .range-slider .irs-handle {
+    background: #fff !important;
+    border: 2px solid #272F3E !important;
+    -webkit-transition: background-color, border-bottom-color, border-right-color, border-left-color, border-top-color 0.4s;
+    -o-transition: background-color, border-bottom-color, border-right-color, border-left-color, border-top-color 0.4s;
+    transition: background-color, border-bottom-color, border-right-color, border-left-color, border-top-color 0.4s;
+  }
+  .mob-wrapper .sunrise-color .range-slider .irs-handle::before {
+    border: 6px solid #272F3E !important;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .mob-wrapper .sunrise-color .play-btn svg {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .mob-wrapper .sunrise-color .play-btn svg path {
+    fill: #272F3E !important;
+  }
+  .mob-wrapper .sunrise-color .play-btn svg circle {
+    stroke: #272F3E !important;
+  }
   .mob-wrapper .sunrise {
     position: relative;
     background: url(../img/back1.png);
@@ -188,6 +226,31 @@
     width: 100%;
     height: 685px;
     margin-top: -4px;
+  }
+  .mob-wrapper .sunrise .sunrise-title,
+  .mob-wrapper .sunrise .sunrise-subtitle,
+  .mob-wrapper .sunrise .sunrise-des,
+  .mob-wrapper .sunrise .sunrise-meet,
+  .mob-wrapper .sunrise .time {
+    -webkit-transition: color 0.4s;
+    -o-transition: color 0.4s;
+    transition: color 0.4s;
+  }
+  .mob-wrapper .sunrise-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 685px;
+    background: url(../img/sunrise-active.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .mob-wrapper .sunrise .sunrise-title {
     font-family: Montserrat;
@@ -200,6 +263,8 @@
     padding-top: 81px;
     margin-bottom: 19px;
     margin-left: 15px;
+    position: relative;
+    z-index: 10;
   }
   .mob-wrapper .sunrise .sunrise-subtitle {
     max-width: 261px;
@@ -212,6 +277,8 @@
     color: #FFFFFF;
     margin-left: 15px;
     margin-bottom: 35px;
+    position: relative;
+    z-index: 10;
   }
   .mob-wrapper .sunrise .sunrise-des {
     max-width: 261px;
@@ -223,6 +290,8 @@
     /* or 16px */
     color: #FFFFFF;
     margin-left: 15px;
+    position: relative;
+    z-index: 10;
   }
   .mob-wrapper .sunrise .sunrise-meet {
     margin-top: 36px;
@@ -233,12 +302,16 @@
     font-size: 18px;
     line-height: 118.5%;
     /* or 21px */
+    position: relative;
+    z-index: 10;
     color: #FFFFFF;
   }
   .mob-wrapper .sunrise img {
     position: absolute;
     right: 0;
     bottom: 0;
+    position: relative;
+    z-index: 10;
   }
   .mob-wrapper .sunrise-slider {
     margin-left: 30px;
@@ -251,6 +324,8 @@
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
+    z-index: 10;
   }
   .mob-wrapper .sunrise-slider .slider-wrapper {
     max-width: 200px;
@@ -332,7 +407,6 @@
   }
   .mob-wrapper .shower {
     position: relative;
-    margin-top: -33px;
     height: auto;
     width: 100%;
     background: url(../img/shower.jpg) no-repeat center;

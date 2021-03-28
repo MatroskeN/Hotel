@@ -6,8 +6,26 @@ $(document).ready(function (){
         to: 0,
         skin: "round",
         hide_min_max: true,
-        hide_from_to: true
+        hide_from_to: true,
+        onChange: function (args){
+            let step = 1 / 100;
+            $('.sunrise-bg').css({
+                opacity: (step * args.from)
+            })
+            if (args.from > 60){
+                $('.sunrise').addClass('sunrise-color');
+            } else {
+                $('.sunrise').removeClass('sunrise-color');
+            }
+        }
     });
+
+    $(window).on('scroll', ScrollAnimation)
+
+    function ScrollAnimation() {
+
+
+    }
 
 
     var swiper = new Swiper('.shower-slider', {
