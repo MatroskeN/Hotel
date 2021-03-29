@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!--Plugin CSS file with desired skin-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/libs.min.js"></script>
     <title>Document</title>
+    <script src="js/main.js"></script>
 </head>
 <body id="body">
     <div class="mob-wrapper">
@@ -36,7 +42,7 @@
                     </div>
                 </div>
             </header>
-            <div class="main-title">
+            <div class="main-title main-anim">
                 <div class="banner-logo">
                     <img src="img/banner-logo.png" alt="banner-logo">
                 </div>
@@ -49,7 +55,8 @@
             </div>
         </div>
         <div class="sunrise">
-            <div class="sunrise-text">
+            <div class="sunrise-bg"></div>
+            <div class="sunrise-text sun-anim">
                 <h2 class="sunrise-title">Рассвет</h2>
                 <h3 class="sunrise-subtitle">
                     Восход прекрасен сам по 
@@ -62,10 +69,606 @@
                     солнца появятся над горизонтом, нежно касаясь поверхности океана. Волны ласкают берег, пытаются передать свою энергетику. Вы испытаете неописуемое чувство единения с природой, будете наблюдать рассвет и любить 
                     друг друга.
                 </p>
+                <h3 class="sunrise-meet">
+                    Встретить рассвет
+                </h3>
+                <div class="sunrise-slider">
+                    <div class="slider-wrapper">
+                        <div class="slider-top">
+                            <div class="top-start time">5:00</div>
+                            <div class="top-stop time">6:00</div>
+                        </div>
+                        <div class="slider-bottom">
+                            <div class="range-slider">
+                                <input type="text" class="range">
+                            </div>
+                            <div class="range-icon">
+                                <svg width="53" height="35" viewBox="0 0 53 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="53" height="35" fill="url(#pattern0)"/>
+                                    <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0" transform="translate(-0.00593427) scale(0.0106512 0.016129)"/>
+                                        </pattern>
+                                        <image id="image0" width="95" height="62" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-play">
+                        <a href="#" class="play-btn">
+                            <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M51.7234 15.2554C31.2771 15.2554 14.7021 31.8303 14.7021 52.2766C14.7021 72.7229 31.2771 89.2979 51.7234 89.2979C72.1697 89.2979 88.7447 72.7229 88.7447 52.2766C88.7447 31.8303 72.1697 15.2554 51.7234 15.2554ZM41.6081 68.3787V36.1746L69.4977 52.2766L41.6081 68.3787Z" fill="white"/>
+                                <circle cx="52" cy="52" r="51.5" stroke="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-                <img class="people-img" src="img/ppl1.png" alt="ppl">
+        </div>
+        <div class="shower">
+            <div class="shower-content">
+                <h2 class="shower-title">Душ</h2>
+                <h3 class="shower-subtitle">Такой же, как в любом другом отеле, но с неповторимыми ощущениями</h3>
+                <p class="shower-text">
+                    Хотите почувствовать себя 
+                    по - новому? Сначала надо смыть накопившиеся за месяцы работы отрицательные эмоции. В душе, обустроенном на лоне природы, вы забудете все, что когда - либо вас расстраивало, в мыслях останутся только хорошие воспоминания.
+                    <br><br>
+                    А теперь представьте – чистая, прозрачная вода омывает ваше тело, капельки струятся по коже, задерживаются, питая каждую клеточку. Вот оно чувство полного удовлетворения от того, что ты сделал то, о чем всегда мечтал и хотел сделать.
+                    <br><br>
+                    Только здесь, в Bubble Hotel Bali, вы испытаете трепетные эмоции от привычных, обычных занятий. Мы предлагаем не комфорт 
+                    и сервис пятизвездочного отеля, а новый опыт, помогающий лучше узнать друг друга, воспоминания, которые останутся в вашей памяти на всю жизнь.
+                </p>
+            </div>
+            <div class="shower-slider-title">
+                <h2 class="title">Фотографии</h2>
+            </div>
+            <div class="shower-slider-container">
+                <div class="swiper-container shower-slider" id="slideMain">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                    </div>
+                    <!-- Add Scrollbar -->
+
+                    <div class="swiper-pagination main-pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toilet">
+            <div class="toilet-content">
+                <h2 class="toilet-title">
+                    Туалет
+                </h2>
+                <h3 class="toilet-subtitle">
+                    Туалет такой же, как дома, но в джунглях
+                </h3>
+                <p class="toilet-text">
+                    Наше утро начинается 
+                    с привычных занятий, и не последнее место в них занимает туалет. Несмотря на то, что весь ваш отдых будет проходить на берегу океана, в окружении диких растений, ваш туалет ничем не уступит по комфорту привычному для вас туалету городских квартир. Вам не нужно менять привычки. Ведь главное правило отеля Bubble Hotel Bali – максимальный комфорт и единение с природой 
+                    в окружении джунглей и океана!
+                </p>
+            </div>
+            <div class="toilet-slider-title">
+                <h2 class="title">Фотографии</h2>
+            </div>
+            <div class="toilet-slider-container">
+                <div class="swiper-container toilet-slider" id="slideMain">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                    </div>
+                    <!-- Add Scrollbar -->
+
+                    <div class="swiper-pagination toilet-pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hot">
+            <div class="hot-content">
+                <h2 class="hot-title">
+                    Жар<br>Магнит
+                </h2>
+                <h3 class="hot-subtitle">
+                    Вы думаете, что в час пик в комнатах - шарах жарко?
+                </h3>
+                <p class="hot-text">
+                    Это действительно так, из-за специфики конструкции шара 
+                    и расположения на открытой местности под тропическим солнцем. Дискомфорт может быть 
+                    с 10 до 16 часов дня в самые жаркие часы, в остальное время в шаре обычно комфортная температура. 
+                    <br><br>
+                    Мы пытаемся решить сложности 
+                    с жарой в час пик. В каждом шаре установлены 1 ступенчатые системы кондиционирования.
+                </p>
+            </div>
+            <img src="img/sun.png" alt="sun" class="sun">
+            <img src="img/hotgirl.png" alt="girl" class="girl">
+        </div>
+        <div class="interier">
+            <div class="interier-content">
+                <h2 class="interier-title">
+                    Интерьер
+                </h2>
+                <h3 class="interier-subtitle">
+                    Ваш отдых важен для нас, 
+                    мы позаботились о комфорте 
+                    в наших отелях
+                </h3>
+                <p class="interier-text">
+                    Предлагаем минимализм в интерьере, помогающий сконцентрироваться на отдыхе 
+                    и любимом человеке. Двуспальные кровати 
+                    с ортопедическим матрасом, занавески из легкой ткани, если вам захочется уединиться. 
+                    <br><br>
+                    Мы позаботились и убрали все, что будет мешать наслаждаться уединением или друг другом.
+                </p>
+            </div>
+            <div class="interier-items">
+                <div class="item">
+                    <img src="img/interier-item (6).png" alt="item">
+                    <div class="item-title">
+                        Царское ложе
+                    </div>
+                    <div class="item-subtitle">
+                        Большая удобная кровать. <br>
+                        Удобно спать и обниматься.
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/interier-item (6).png" alt="item">
+                    <div class="item-title">
+                        Царское ложе
+                    </div>
+                    <div class="item-subtitle">
+                        Большая удобная кровать. <br>
+                        Удобно спать и обниматься.
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/interier-item (6).png" alt="item">
+                    <div class="item-title">
+                        Царское ложе
+                    </div>
+                    <div class="item-subtitle">
+                        Большая удобная кровать. <br>
+                        Удобно спать и обниматься.
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/interier-item (6).png" alt="item">
+                    <div class="item-title">
+                        Царское ложе
+                    </div>
+                    <div class="item-subtitle">
+                        Большая удобная кровать. <br>
+                        Удобно спать и обниматься.
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/interier-item (6).png" alt="item">
+                    <div class="item-title">
+                        Царское ложе
+                    </div>
+                    <div class="item-subtitle">
+                        Большая удобная кровать. <br>
+                        Удобно спать и обниматься.
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/interier-item (6).png" alt="item">
+                    <div class="item-title">
+                        Царское ложе
+                    </div>
+                    <div class="item-subtitle">
+                        Большая удобная кровать. <br>
+                        Удобно спать и обниматься.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-content">
+                <h2 class="menu-title">
+                    Меню
+                </h2>
+                <h3 class="menu-subtitle">
+                    мы подаем только вкусную еду
+                </h3>
+                <div class="menu-text">
+                    <p class="inner-text">
+                        Вы можете заказать блюда итальянской кухни, 
+                        и мы доставим их из итальянского ресторана 
+                        или приготовим завтрак, обед или ужин на барбекю из заготовок на любой вкус. Только экологически чистые продукты, много овощей и фруктов. 
+                        <br><br>
+                        Рыба по особенному рецепту на углях 
+                        с ароматными приправами, тушеные овощи 
+                        в качестве гарнира... И все это на берегу океана 
+                        под шум прибоя! Высокая цена на еду обусловлена сложной логистикой и качеством еды.
+                    </p>
+                    <button class="pdf">
+                        <img src="img/pdf.svg" alt="pdf">
+                        <p>Смотреть меню</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="pleasures">
+            <div class="pleasures-content">
+                <h2 class="pleasures-title">
+                    Удовольствия
+                </h2>
+                <div class="pleasures-text">
+                    Чтобы наполнить свой шар атмосферой уюта, любви и романтики, вы можете выбрать следующие дополнительные опции:
+                </div>
+            </div>
+            <div class="swiper-container dinner-slider" id="slideMain">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider">
+                    <img class="dinner-pic" src="img/pleasures-slide.png" alt="slide">
+                    <div class="dinner-price">
+                        <p>$44</p>
+                    </div>
+                    <div class="dinner-slider-title">
+                        РОМАНТИЧЕСКИЙ УЖИН
+                    </div>
+                    <div class="dinner-slider-subtitle">
+                        Насладитесь ужином под магическим сиянием звёзд под шум океана в умиротворённом уединение.
+                    </div>
+                  </div> 
+                  <div class="swiper-slide slider">
+                    <img class="dinner-pic" src="img/pleasures-slide.png" alt="slide">
+                    <div class="dinner-price">
+                        <p>$44</p>
+                    </div>
+                    <div class="dinner-slider-title">
+                        РОМАНТИЧЕСКИЙ УЖИН
+                    </div>
+                    <div class="dinner-slider-subtitle">
+                        Насладитесь ужином под магическим сиянием звёзд под шум океана в умиротворённом уединение.
+                    </div>
+                  </div> 
+                  <div class="swiper-slide slider">
+                    <img class="dinner-pic" src="img/pleasures-slide.png" alt="slide">
+                    <div class="dinner-price">
+                        <p>$44</p>
+                    </div>
+                    <div class="dinner-slider-title">
+                        РОМАНТИЧЕСКИЙ УЖИН
+                    </div>
+                    <div class="dinner-slider-subtitle">
+                        Насладитесь ужином под магическим сиянием звёзд под шум океана в умиротворённом уединение.
+                    </div>
+                  </div> 
+                </div>
+                <!-- Add Scrollbar -->
+                  <div class="swiper-scrollbar dinner-scrollbar"></div>
+              </div>
+        </div>
+        <div class="hotel jungle">
+            <a href="">
+                <img src="img/playBtn.svg" alt="playbtn" class="jungle-play">
+            </a>
+            <div class="hotel-content">
+                <div class="hotel-subtitle">1 отель</div>
+                <h2 class="hotel-title">
+                    Джунгли<br>Убуд
+                </h2>
+                <p class="hotel-text">
+                    Вы будете жить на холме, среди джунглей, 
+                    в окружении рисовых полей, в уединенном месте над речкой. Окунитесь с головой 
+                    в атмосферу первозданной природы. 
+                    Находится недалеко от лобби, легкая доступность.
+                </p>
+                <div class="hotel-describe">
+                    <div class="warning d-item">
+                        <img src="img/warning.svg" alt="warning" class="warn">
+                        <p>
+                            1 шар с персональным бассейном, 9 шаров
+                            без бассейна Кондиционеры в каждом номере
+                        </p>
+                    </div>
+                    <div class="info d-item">
+                        <img src="img/info.svg" alt="info" class="inf">
+                        <p>
+                            Далеко от ресторанов, но у нас есть еда, 15 - 30 мин удалённость от центра Убуда
+                        </p>
+                    </div>
+                </div>
+                <div class="hotel-slider-title">
+                    Фотографии
+                </div>
+                <div class="jungle-slider-container">
+                    <div class="swiper-container jungle-slider" id="slideMain">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                        </div>
+                        <!-- Add Scrollbar -->
+
+                        <div class="swiper-pagination jungle-pagination">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel beach">
+            <a href="">
+                <img src="img/playBtn.svg" alt="playbtn" class="beach-play">
+            </a>
+            <div class="hotel-content">
+                <div class="hotel-subtitle">2 отель</div>
+                <h2 class="hotel-title">
+                    Пляж<br>Нунгаланг
+                </h2>
+                <p class="hotel-text">
+                    Труднодоступная местность с прекрасным видом на океан и песчаным пляжем в 10 шагах от номера. Непростой спуск с горы через джунгли ~20 минут
+                </p>
+                <div class="hotel-describe">
+                    <div class="warning d-item">
+                        <img src="img/warning.svg" alt="warning" class="warn">
+                        <p>
+                            Обязательно иметь удобную обувь. Купаться запрещено, сильное течение, и есть рифы
+                        </p>
+                    </div>
+                    <div class="info d-item">
+                        <img src="img/info.svg" alt="info" class="inf">
+                        <p>
+                            Персонал не может оперативно откликнуться на просьбу (Им тоже нужно преодалевать 20 минутный спуск)
+                        </p>
+                    </div>
+                </div>
+                <div class="hotel-slider-title beach-slider-title">
+                    Фотографии
+                </div>
+                <div class="beach-slider-container">
+                    <div class="swiper-container beach-slider" id="slideMain">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                        </div>
+                        <!-- Add Scrollbar -->
+
+                        <div class="swiper-pagination beach-pagination">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hotel beach2">
+            <a href="">
+                <img src="img/playBtn.svg" alt="playbtn" class="beach2-play">
+            </a>
+            <div class="hotel-content">
+                <div class="hotel-subtitle">2 отель</div>
+                <h2 class="hotel-title">
+                    Пляж<br>Ньянг Ньянг
+                </h2>
+                <p class="hotel-text">
+                    Труднодоступная местность с прекрасным видом на океан и песчаным пляжем в 10 шагах от номера. Непростой спуск с горы через джунгли ~20 минут
+                </p>
+                <div class="hotel-describe">
+                    <div class="warning d-item">
+                        <img src="img/warning.svg" alt="warning" class="warn">
+                        <p>
+                            Обязательно иметь удобную обувь. Купаться запрещено, сильное течение, и есть рифы
+                        </p>
+                    </div>
+                    <div class="info d-item">
+                        <img src="img/info.svg" alt="info" class="inf">
+                        <p>
+                            Персонал не может оперативно откликнуться на просьбу (Им тоже нужно преодалевать 20 минутный спуск)
+                        </p>
+                    </div>
+                </div>
+                <div class="hotel-slider-title beach-slider-title">
+                    Фотографии
+                </div>
+                <div class="beach2-slider-container">
+                    <div class="swiper-container beach2-slider" id="slideMain">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/shower-slide1.png" alt="slide">
+                            </div>
+                        </div>
+                        <!-- Add Scrollbar -->
+
+                        <div class="swiper-pagination beach2-pagination">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="instagram">
+            <div class="insta-content">
+                <h2 class="insta-title">Instagram</h2>
+                <div class="insta-subtitle">Мы уже приняли более 5 400 гостей, посмотрите их фотографии и что они пишут о нашем отеле</div>
+            </div>
+            <div class="insta-gallery">
+                <div class="insta-item">
+                    <img src="img/insta-item.png" alt="item">
+                </div>
+                <div class="insta-item">
+                    <img src="img/insta-item.png" alt="item">
+                </div>
+                <div class="insta-item">
+                    <img src="img/insta-item.png" alt="item">
+                </div>
+                <div class="insta-item">
+                    <img src="img/insta-item.png" alt="item">
+                </div>
+            </div>
+            <div class="insta-reviews">
+                <div class="review">
+                    <img src="img/avatar.png" alt="avatar" class="avatar">
+                    <div class="review-body">
+                        <div class="nick">
+                            @sabinebruelhart:
+                        </div>
+                        <div class="body-text">
+                            Потрясающее месте где хочется встречать рассвет
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <img src="img/avatar.png" alt="avatar" class="avatar">
+                    <div class="review-body">
+                        <div class="nick">
+                            @sabinebruelhart:
+                        </div>
+                        <div class="body-text">
+                            Потрясающее месте где хочется встречать рассвет
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <img src="img/avatar.png" alt="avatar" class="avatar">
+                    <div class="review-body">
+                        <div class="nick">
+                            @sabinebruelhart:
+                        </div>
+                        <div class="body-text">
+                            Потрясающее месте где хочется встречать рассвет
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="answers">
+                <h2 class="answers-title">
+                    Отзывы
+                </h2>
+                <div class="insta-slider-container">
+                    <div class="swiper-container insta-slider" id="slideMain">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide slider">
+                            <img src="img/insta-slide.png" alt="slide">
+                          </div> 
+                          <div class="swiper-slide slider">
+                            <img src="img/insta-slide.png" alt="slide">
+                          </div> 
+                          <div class="swiper-slide slider">
+                            <img src="img/insta-slide.png" alt="slide">
+                          </div> 
+                        </div>
+                        <!-- Add Scrollbar -->
+                        
+                        <div class="swiper-pagination insta-pagination">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mission">
+            <img src="img/felix.png" alt="felix" class="felix">
+            <div class="mission-content">
+                <h2 class="mission-title">
+                    Наша <br> миссия
+                </h2>
+                <p class="mission-text">
+                    Cостоит в том, чтобы организовать незабываемый романтический 
+                    опыт для влюбленных пар, чтобы углубить их отношения, давая 
+                    им возможность быть вдали 
+                    от суеты и шума и вернуться 
+                    к внутреннему ребенку 
+                    в первозданной природе.
+                </p>
+                <div class="mission-links">
+                    <img src="img/instagram.png" alt="inst" class="social">
+                    <img src="img/facebook.png" alt="facebook" class="social">
+                </div>
+                <img src="img/line.png" alt="line" class="line">
+                <p class="name">Феликс Дёмин</p>
+            </div>
+        </div>
+        <div class="sky">
+            <div class="sky-content">
+                <h2 class="sky-title">
+                    Звездное <br> небо
+                </h2>
+                <h3 class="sky-subtitle">
+                    Увидев звездную ночь, никогда ее не забудешь, и остается только жалеть тех, кто этого не видел
+                </h3>
+                <p class="sky-text">
+                    Хотите удивить или удивиться? Смотрите на небо, наслаждайтесь звездами. Здесь в номерах отеля Bubble Hotel Bali вы поймете, что счастье есть, оно рядом, на расстоянии вытянутой руки. 
+                    <br><br>
+                    Хотите вспомнить эмоции детства, где нет границ, 
+                    а только возможности, безусловное счастье от исследования мира и любознательности?
+                    <br><br>
+                    Тогда вам точно к нам, почти на край земли, где соединятся океан и небеса. Научитесь дарить друг другу счастье, любите друг друга под звездами!
+                </p>
+            </div>
+            <div class="sky-slider-title">
+                Фотографии
+            </div>
+            <div class="sky-slider-container">
+                <div class="swiper-container sky-slider" id="slideMain">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/shower-slide1.png" alt="slide">
+                        </div>
+                    </div>
+                    <!-- Add Scrollbar -->
+
+                    <div class="swiper-pagination sky-pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="remember">
+            <div class="footer-content">
+                <img src="img/footer-logo.png" alt="logo" class="footer-logo">
+                <h2 class="footer-title">
+                    Получите этот день в своих воспоминаниях
+                </h2>
+                <h3 class="footer-subtitle">
+                    Вы получите незабываемые впечатления и ощутите влияние живой природы
+                </h3>
+                <button class="get">Получить</button>
+                <div class="copyright">© 2017 - 2019 Bubble Hotel Bali</div>
+            </div>
         </div>
     </div>
-    <script src="js/main.js"></script>
 </body>
 </html>
