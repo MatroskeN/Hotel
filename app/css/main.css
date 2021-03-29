@@ -756,6 +756,7 @@
     /* or 11px */
     text-align: center;
     color: #272F3E;
+    max-width: 148px;
   }
   .mob-wrapper .menu {
     background: url(../img/menubg.png) no-repeat center;
@@ -830,11 +831,10 @@
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 145%;
     /* or 17px */
     text-align: center;
     color: #272F3E;
-    padding-top: 13px;
+    padding-top: 16px;
   }
   .mob-wrapper .pleasures {
     background: #272F3E;
@@ -897,6 +897,8 @@
     margin-left: 15px;
   }
   .mob-wrapper .pleasures .dinner-slider .slider .dinner-pic {
+    width: 160px;
+    height: 113px;
     position: absolute;
     top: 0;
     z-index: 1;
@@ -971,6 +973,7 @@
   .mob-wrapper .jungle {
     background: url(../img/junglebg.png) no-repeat center;
     background-size: cover;
+    background-color: #fff;
   }
   .mob-wrapper .jungle .jungle-play {
     position: absolute;
@@ -982,6 +985,7 @@
   .mob-wrapper .beach {
     background: url(../img/beachbg.png) no-repeat center;
     background-size: cover;
+    background-color: #fff;
   }
   .mob-wrapper .beach .beach-play {
     position: absolute;
@@ -993,6 +997,7 @@
   .mob-wrapper .beach2 {
     background: url(../img/beach2bg.png) no-repeat center;
     background-size: cover;
+    background-color: #fff;
   }
   .mob-wrapper .beach2 .beach2-play {
     position: absolute;
@@ -1351,6 +1356,7 @@
     padding-top: 79px;
     background: url(../img/missionbg.png) no-repeat center;
     background-size: cover;
+    background-color: #fff;
   }
   .mob-wrapper .mission .felix {
     position: absolute;
