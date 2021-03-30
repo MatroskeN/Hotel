@@ -35,12 +35,25 @@ $(document).ready(function (){
         }
 
         if (Screen1.getBoundingClientRect().top < (window.innerHeight - 1) && window.Animate == true){
-            $('html,body').animate({scrollTop: window.innerHeight +"px"},{
-                duration:1E3,
+            $('body').css({
+                overflow: 'hidden'
+            })
+            $('html,body').animate({scrollTop: 0 +"px"},{
+                duration:0,
                 complete: function (){
                     window.Animate = false
+                    $('html,body').animate({scrollTop: window.innerHeight +"px"},{
+                        duration:1E3,
+                        complete: function (){
+                            window.Animate = false
+                            $('body').css({
+                                overflow: 'auto'
+                            })
+                        }
+                    });
                 }
             });
+
             window.Animate = false
 
         }
