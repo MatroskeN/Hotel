@@ -27,12 +27,15 @@ $(document).ready(function (){
     function ScrollAnimation() {
 
 
+
         let Main = document.querySelector('.banner');
         let Screen1 = document.querySelector('.sunrise');
 
-        if (Screen1.getBoundingClientRect().top == window.innerHeight){
-            window.Animate = true
-        }
+        console.log(Screen1.getBoundingClientRect().top, window.Animate)
+
+        // if (Screen1.getBoundingClientRect().top == 0){
+        //     window.Animate = true
+        // }
 
         if (Screen1.getBoundingClientRect().top < (window.innerHeight - 1) && window.Animate == true){
             $('body').css({
