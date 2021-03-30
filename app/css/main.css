@@ -1513,6 +1513,7 @@
   }
   .mob-wrapper .remember .footer-content .footer-logo {
     margin-bottom: 26px;
+    width: 74px;
   }
   .mob-wrapper .remember .footer-content .footer-title {
     font-family: Montserrat;
@@ -1563,4 +1564,10 @@
     margin-top: 44px;
     padding-bottom: 42px;
   }
+}
+.fancybox-bg {
+  background: rgba(43, 46, 45, 0.9);
+}
+.svg-logo {
+  width: 49px;
 }
