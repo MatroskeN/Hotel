@@ -820,10 +820,17 @@
     display: flex;
     border: none;
     outline: none;
+    padding: 0;
   }
   .mob-wrapper .menu .menu-content .menu-text .pdf img {
-    padding-left: 15px;
-    padding-top: 7px;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
     padding-right: 13px;
   }
   .mob-wrapper .menu .menu-content .menu-text .pdf p {
@@ -834,7 +841,13 @@
     /* or 17px */
     text-align: center;
     color: #272F3E;
-    padding-top: 16px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
   }
   .mob-wrapper .pleasures {
     background: #272F3E;
