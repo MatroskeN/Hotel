@@ -1351,7 +1351,7 @@
     height: 406px !important;
   }
   .mob-wrapper .instagram .answers .insta-slider-container .swiper-pagination-bullet {
-    margin: 0px 10px !important;
+    margin: -12px 10px !important;
     width: 10px !important;
     height: 10px !important;
   }
