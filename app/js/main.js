@@ -82,7 +82,6 @@ $(document).ready(function (){
 
     var swiper = new Swiper('.shower-slider', {
         slidesPerView: 'auto',
-        loop: true,
         pagination: {
             el: '.main-pagination',
             type: 'bullets',

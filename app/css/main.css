@@ -1350,6 +1350,14 @@
     width: 259px !important;
     height: 406px !important;
   }
+  .mob-wrapper .instagram .answers .insta-slider-container .swiper-pagination-bullet {
+    margin: 0px 10px !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .mob-wrapper .instagram .answers .insta-slider-container .swiper-pagination-bullet-active {
+    background: #272F3E !important;
+  }
   .mob-wrapper .mission {
     position: relative;
     height: auto;
@@ -1390,7 +1398,10 @@
     max-width: 178px;
     margin-bottom: 41px;
   }
-  .mob-wrapper .mission .mission-content .mission-links .social:first-child {
+  .mob-wrapper .mission .mission-content .mission-links a {
+    text-decoration: none !important;
+  }
+  .mob-wrapper .mission .mission-content .mission-links a .social:first-child {
     margin-right: 10px;
   }
   .mob-wrapper .mission .mission-content .name {
