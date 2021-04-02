@@ -221,6 +221,9 @@
     -o-transition: all 0.4s;
     transition: all 0.4s;
   }
+  .mob-wrapper .sunrise-color .play-btn svg rect {
+    fill: #fff !important;
+  }
   .mob-wrapper .sunrise-color .play-btn svg path {
     fill: #272F3E !important;
   }
