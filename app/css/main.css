@@ -1606,7 +1606,7 @@
     display: -ms-flexbox !important;
     display: flex !important;
     position: fixed;
-    z-index: 5;
+    z-index: 11;
     bottom: 20px;
     margin: 0 auto;
     width: 350px;
