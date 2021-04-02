@@ -154,22 +154,26 @@ $(document).ready(function (){
 
 //modal
 $("#open-lang").on("click", function () {
-    document.getElementById("lang-popup").style.display = "block";
+    $("#lang-popup").removeClass("hidden");
+    $("#lang-popup").addClass("show");
     document.getElementById("body").style.overflow = "hidden";
 });
 
 $("#close-lang").on("click", function () {
-    document.getElementById("lang-popup").style.display = "none";
+    $("#lang-popup").removeClass("show");
+    $("#lang-popup").addClass("hidden");
     document.getElementById("body").style.overflow = "visible";
 });
 
 $("#burger").on("click", function () {
-    document.getElementById("menu-burger").style.display = "block";
+    $("#menu-burger").removeClass("hidden");
+    $("#menu-burger").addClass("show");
     document.getElementById("body").style.overflow = "hidden";
 });
 
 $("#close-burger").on("click", function () {
-    document.getElementById("menu-burger").style.display = "none";
+    $("#menu-burger").removeClass("show");
+    $("#menu-burger").addClass("hidden");
     document.getElementById("body").style.overflow = "visible";
 });
 
