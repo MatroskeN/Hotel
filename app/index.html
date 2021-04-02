@@ -22,6 +22,47 @@
     <script src="js/main.js"></script>
 </head>
 <body id="body">
+    <div class="flow-btn">
+        <p>Бронировать</p>
+    </div>
+    <div class="lang-popup" id="lang-popup">
+        <svg id="close-lang" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8929 1.6928C13.2834 1.30227 13.9166 1.30227 14.3071 1.6928C14.6977 2.08332 14.6977 2.71648 14.3071 3.10701L9.41424 7.9999L14.3071 12.8928C14.6977 13.2833 14.6977 13.9165 14.3071 14.307C13.9166 14.6975 13.2834 14.6975 12.8929 14.307L8.00002 9.41412L3.10713 14.307C2.71661 14.6975 2.08344 14.6975 1.69292 14.307C1.30239 13.9165 1.30239 13.2833 1.69292 12.8928L6.58581 7.9999L1.69292 3.10701C1.30239 2.71648 1.30239 2.08332 1.69292 1.6928C2.08344 1.30227 2.71661 1.30227 3.10713 1.6928L8.00002 6.58569L12.8929 1.6928Z" fill="#C4C4C4"/>
+        </svg>
+        <div class="lang-block">
+            <div class="choose-title">
+                Выберите язык
+            </div>
+            <div class="lang-box">
+                English
+            </div>
+            <div class="lang-box">
+                Русский
+            </div>
+        </div>
+    </div>
+    <div class="lang-popup" id="menu-burger">
+        <svg id="close-burger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8929 1.6928C13.2834 1.30227 13.9166 1.30227 14.3071 1.6928C14.6977 2.08332 14.6977 2.71648 14.3071 3.10701L9.41424 7.9999L14.3071 12.8928C14.6977 13.2833 14.6977 13.9165 14.3071 14.307C13.9166 14.6975 13.2834 14.6975 12.8929 14.307L8.00002 9.41412L3.10713 14.307C2.71661 14.6975 2.08344 14.6975 1.69292 14.307C1.30239 13.9165 1.30239 13.2833 1.69292 12.8928L6.58581 7.9999L1.69292 3.10701C1.30239 2.71648 1.30239 2.08332 1.69292 1.6928C2.08344 1.30227 2.71661 1.30227 3.10713 1.6928L8.00002 6.58569L12.8929 1.6928Z" fill="#C4C4C4"/>
+        </svg>
+        <div class="lang-block burger-block">
+            <div class="choose-title menu-burger-title">
+                Меню
+            </div>
+            <div class="lang-box burger-box">
+                Удобства
+            </div>
+            <div class="lang-box burger-box">
+                Услуги
+            </div>
+            <div class="lang-box burger-box">
+                Расположение
+            </div>
+            <div class="lang-box burger-box">
+                Условия пользования
+            </div>
+        </div>
+    </div>
     <div class="mob-wrapper">
         <div class="banner">
             <header>
@@ -29,17 +70,17 @@
                     <div class="left-block">
                         <div class="logo">
                             <svg
-              version="1.1"
-              id="Режим_изоляции"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 200 150"
-              style="enable-background:new 0 0 200 150;"
-              xml:space="preserve"
-              class="svg-logo"
-            >
+                                version="1.1"
+                                id="Режим_изоляции"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 200 150"
+                                style="enable-background:new 0 0 200 150;"
+                                xml:space="preserve"
+                                class="svg-logo"
+                                >
               <style type="text/css">
                 .st0 {
                   fill-rule: evenodd;
@@ -375,21 +416,22 @@
 	c-1.1-1-2.1-2.2-3.1-3.2c-0.4-0.4-0.7-0.8-1.2-0.8c1.6-3.4,1.6-8.1,1.6-11.3c0-1.4-0.1-2.7-0.2-4.1
 	C176.2,124.6,176.8,124.1,177.3,123.5L177.3,123.5z"/></svg> 
                         </div>
-                        <div class="lang-panel">
+                        <div class="lang-panel" id="open-lang">
                             <div class="lang">Ru 
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg  width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9 0H3C1.34315 0 0 1.34315 0 3V9C0 10.6569 1.34315 12 3 12H9C10.6569 12 12 10.6569 12 9V3C12 1.34315 10.6569 0 9 0Z" fill="white"/>
                                     <path d="M3 5L6 7L9 5" stroke="#023E5B"/>
-                                </svg>                                
+                                </svg>                             
                             </div>
                         </div>
                     </div>
                     <div class="right-block">
-                        <img src="img/burger.svg" alt="burger">
+                        <img id="burger" src="img/burger.svg" alt="burger">
                     </div>
                 </div>
             </header>
             <div class="main-title main-anim">
+                
                 <div class="banner-logo">
                     <img src="img/banner-logo.png" alt="banner-logo">
                 </div>
@@ -474,67 +516,67 @@
                 <div class="swiper-container shower-slider" id="slideMain">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (1).jfif" alt="slide">
+                            <img src="img/Душ/Rectangle 75.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (1).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 76.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (2).jfif" alt="slide">
+                            <img src="img/Душ/Rectangle 77.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (2).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 78.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (3).jfif" alt="slide">
+                            <img src="img/Душ/Rectangle 79.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (3).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 80.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (4).jfif" alt="slide">
+                            <img src="img/Душ/Rectangle 81.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (4).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 82.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (5).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 83.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (6).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 84.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (7).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 85.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (8).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 86.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (9).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 87.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (10).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 88.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (11).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 89.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (12).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 90.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (13).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 91.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (14).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 92.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (15).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 93.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (16).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 94.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/slider1 (17).jpg" alt="slide">
+                            <img src="img/Душ/Rectangle 95.jpg" alt="slide">
                         </div>
                     </div>
                     <!-- Add Scrollbar -->
@@ -565,13 +607,19 @@
                 <div class="swiper-container toilet-slider" id="slideMain">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slider">
-                            <img src="img/shower-slide1.png" alt="slide">
+                            <img src="img/Туалет/Rectangle 36.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/shower-slide1.png" alt="slide">
+                            <img src="img/Туалет/Rectangle 96.jpg" alt="slide">
                         </div>
                         <div class="swiper-slide slider">
-                            <img src="img/shower-slide1.png" alt="slide">
+                            <img src="img/Туалет/Rectangle 97.jpg" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/Туалет/Rectangle 98.jpg" alt="slide">
+                        </div>
+                        <div class="swiper-slide slider">
+                            <img src="img/Туалет/Rectangle 99.jpg" alt="slide">
                         </div>
                     </div>
                     <!-- Add Scrollbar -->
@@ -1012,13 +1060,106 @@
                     <div class="swiper-container jungle-slider" id="slideMain">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide slider">
-                                <img src="img/shower-slide1.png" alt="slide">
+                                <img src="img/Джунгли Убуд/Rectangle 100.jpg" alt="slide">
                             </div>
                             <div class="swiper-slide slider">
-                                <img src="img/shower-slide1.png" alt="slide">
+                                <img src="img/Джунгли Убуд/Rectangle 101.jpg" alt="slide">
                             </div>
                             <div class="swiper-slide slider">
-                                <img src="img/shower-slide1.png" alt="slide">
+                                <img src="img/Джунгли Убуд/Rectangle 102.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 103.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 104.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 105.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 106.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 107.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 108.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 109.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 110.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 111.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 112.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 113.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 114.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 115.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 116.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 117.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 118.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 119.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 120.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 121.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 122.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 123.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 124.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 125.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 126.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 127.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 128.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 129.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 130.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 131.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 132.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Джунгли Убуд/Rectangle 133.jpg" alt="slide">
                             </div>
                         </div>
                         <!-- Add Scrollbar -->
@@ -1063,13 +1204,46 @@
                     <div class="swiper-container beach-slider" id="slideMain">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide slider">
-                                <img src="img/shower-slide1.png" alt="slide">
+                                <img src="img/Пляж Нунгаланг/Rectangle 134.jpg" alt="slide">
                             </div>
                             <div class="swiper-slide slider">
-                                <img src="img/shower-slide1.png" alt="slide">
+                                <img src="img/Пляж Нунгаланг/Rectangle 135.jpg" alt="slide">
                             </div>
                             <div class="swiper-slide slider">
-                                <img src="img/shower-slide1.png" alt="slide">
+                                <img src="img/Пляж Нунгаланг/Rectangle 136.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 137.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 138.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 139.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 140.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 141.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 142.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 143.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 144.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 145.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 146.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Нунгаланг/Rectangle 147.jpg" alt="slide">
                             </div>
                         </div>
                         <!-- Add Scrollbar -->
@@ -1113,13 +1287,61 @@
                     <div class="swiper-container beach2-slider" id="slideMain">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide slider">
-                                <img src="img/shower-slide1.png" alt="slide">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 148.jpg" alt="slide">
                             </div>
                             <div class="swiper-slide slider">
-                                <img src="img/shower-slide1.png" alt="slide">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 149.jpg" alt="slide">
                             </div>
                             <div class="swiper-slide slider">
-                                <img src="img/shower-slide1.png" alt="slide">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 150.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 151.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 152.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 153.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 154.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 155.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 156.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 157.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 158.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 159.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 160.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 161.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 162.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 163.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 164.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 165.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide slider">
+                                <img src="img/Пляж Ньянг Ньянг/Rectangle 166.jpg" alt="slide">
                             </div>
                         </div>
                         <!-- Add Scrollbar -->

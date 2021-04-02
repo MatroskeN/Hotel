@@ -152,6 +152,25 @@ $(document).ready(function (){
         centeredSlides: true,
     });
 
+//modal
+$("#open-lang").on("click", function () {
+    document.getElementById("lang-popup").style.display = "block";
+    document.getElementById("body").style.overflow = "hidden";
+});
 
+$("#close-lang").on("click", function () {
+    document.getElementById("lang-popup").style.display = "none";
+    document.getElementById("body").style.overflow = "visible";
+});
+
+$("#burger").on("click", function () {
+    document.getElementById("menu-burger").style.display = "block";
+    document.getElementById("body").style.overflow = "hidden";
+});
+
+$("#close-burger").on("click", function () {
+    document.getElementById("menu-burger").style.display = "none";
+    document.getElementById("body").style.overflow = "visible";
+});
 
 })
