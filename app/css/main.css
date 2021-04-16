@@ -1387,7 +1387,7 @@
   }
   .mob-wrapper .mission .felix {
     position: absolute;
-    bottom: -46px;
+    bottom: 0px;
     right: 0;
     z-index: 1;
   }
